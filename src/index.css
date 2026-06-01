@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@plugin "daisyui" {
+  themes: [light, dark, cupcake];
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+}
+
+@theme {
+  --color-primary: #CAEB66;
+}
+
+@utility dual-side-fill-animation {
+  @apply relative overflow-hidden z-0 hover:outline-0;
+}
+
+/* Dual Side Fill Animation */
+.dual-side-fill-animation::before,
+.dual-side-fill-animation::after {
+  content: '';
+  @apply absolute top-0 h-full w-0 bg-primary/50 transition-all duration-500;
+}
+
+.dual-side-fill-animation::before {
+  @apply left-0;
+}
+
+.dual-side-fill-animation::after {
+  @apply right-0;
+}
+
+.dual-side-fill-animation:hover::before,
+.dual-side-fill-animation:hover::after {
+  @apply w-1/2;
+}
+
+.dual-side-fill-animation > * {
+  @apply relative z-10;
+}
+
+/* Dual Side Clear Animation */
+@utility dual-side-clear-animation {
+  @apply relative overflow-hidden z-0;
+}
+
+.dual-side-clear-animation::before {
+  content: '';
+  @apply absolute top-0 left-1/2 -translate-x-1/2 h-full w-0 bg-white transition-all duration-500;
+}
+
+.dual-side-clear-animation:hover {
+  @apply outline outline-primary;
+}
+
+.dual-side-clear-animation:hover::before {
+  @apply w-full;
+}
