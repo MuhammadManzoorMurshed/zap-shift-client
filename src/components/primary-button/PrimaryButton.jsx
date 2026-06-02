@@ -3,7 +3,7 @@ import { BsArrowUpRightCircleFill } from 'react-icons/bs';
 const PrimaryButton = ({ buttonStyle = '', buttonText = 'Click Me', arrowStyle = '', isArrow = true }) => {
     return (
         <div className="flex justify-center items-center gap-0">
-            <button type="button" className={`${buttonStyle} dual-side-clear-animation rounded-xl bg-primary font-bold text-[20px] cursor-pointer`
+            <button type="button" className={`${buttonStyle} dual-side-clear-animation bg-primary font-bold cursor-pointer`
             }>
                 <span className="relative z-10">{buttonText}</span>
             </button>

@@ -1,10 +1,18 @@
 // import React from 'react';
 
+import HeroCarousel from "./hero-carousel/HeroCarousel";
+
 const Home = () => {
     return (
-        <div className='min-h-screen flex justify-center items-center'>
-            <h1>Home</h1>
-        </div>
+        <>
+            <HeroCarousel />
+            
+            <div className='min-h-screen flex justify-center items-center'>
+                <h1>Home</h1>
+            </div>
+
+            
+        </>
     );
 };
 

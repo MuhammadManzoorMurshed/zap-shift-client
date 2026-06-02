@@ -57,3 +57,11 @@ body {
 .dual-side-clear-animation:hover::before {
   @apply w-full;
 }
+
+/* Swiper.js Style */
+@media (max-width: 640px) {
+  .hero-swiper .swiper-button-next,
+  .hero-swiper .swiper-button-prev {
+    display: none !important;
+  }
+}
